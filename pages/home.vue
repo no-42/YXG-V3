@@ -3,7 +3,7 @@
     <view v-if="pageValue == 0">
       <view class="logo-view">
         <image src="../static/img/yxg-logo-2.png" mode="aspectFit"
-               class="logo-image">
+               class="logo-image"></image>
       </view>
       <view style="margin: 50rpx;">
         <u-text class="logo-text" size="25" :bold="true" text="上午好,领航员"></u-text>

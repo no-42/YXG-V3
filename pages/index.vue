@@ -1,5 +1,5 @@
 <template>
-  <view class="body">
+  <view class="all-body">
     <image src="../static/img/welcome.jpg" class="img" mode="center">
     </image>
     <view class="text-and-button">
@@ -9,11 +9,11 @@
         <u-text color="white" text="YXG 欢迎您"></u-text>
       </view>
       <view class="show-button">
-        <u-button text="登录"
-                  class="button-purple"
-                  @click="toLogo"></u-button>
-        <u-button class="button-white"
-                  text="创建新用户" @click="toRegister"></u-button>
+        <button class="button-white-back-purple-text"
+                @click="toLogo">登录
+        </button>
+        <button class="button-white"
+                @click="toRegister">创建新用户</button>
       </view>
     </view>
   </view>
@@ -54,6 +54,6 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-  bottom: 200 rpx;
+  bottom: 200rpx;
 }
 </style>

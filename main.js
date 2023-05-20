@@ -1,7 +1,9 @@
 import uviewPlus from './uni_modules/uview-plus'
+// import './static/css/common.scss'
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
+import './static/css/common.scss'
 // Vue.use(uviewPlus)
 // Vue.config.unit = 'rpx'
 Vue.config.productionTip = false

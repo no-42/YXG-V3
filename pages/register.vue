@@ -39,7 +39,7 @@
           </u-checkbox-group>
         </u-form-item>
         <u-form-item>
-          <u-button class="button-purple" text="创建账户" @click="registerFunction"></u-button>
+          <button class="button-purple-back-white-text" @click="registerFunction">创建账户</button>
         </u-form-item>
       </u-form>
     </view>
@@ -67,7 +67,7 @@ export default {
     registerFunction() {
       console.log("注册");
       uni.navigateTo({
-        url: "/pages/index/verification?name=" +
+        url: "/pages/verification?name=" +
             this.register.name + "&" +
             "passWord=" + this.register.passWord + "&" +
             "sign=" + this.register.sign + "&" +

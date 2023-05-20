@@ -3,7 +3,7 @@
     <view>
       <view class="logo-view">
         <image src="../static/img/yxg-logo.png" mode="aspectFit"
-               class="logo-image">
+               class="logo-image"></image>
       </view>
       <view style="margin-top: 50rpx;">
         <u-text class="half-text-view" size="25" :bold="true" text="登录到"></u-text>
@@ -13,7 +13,7 @@
       </view>
       <u-line length="10%" color="rgb(255,126,118)" margin="10rpx 10rpx" :hairline="true"></u-line>
     </view>
-    <view>
+    <view class="show-button">
       <u-form :model="login" ref="ulogin">
         <u-text :color="textColor" text="邮箱或手机"></u-text>
         <u-form-item>
@@ -30,13 +30,13 @@
           </u-checkbox-group>
         </u-form-item>
         <u-form-item>
-          <u-button class="button-purple" text="登录" @click="loginFunction"></u-button>
+          <button class="button-purple-back-white-text" @click="loginFunction">登录</button>
         </u-form-item>
         <u-row>
           <u-text :color="textColor" text="或" align="center"></u-text>
         </u-row>
         <u-form-item>
-          <u-button class="button-purple" text="YXG社区一键登录" @click="fastLogin"></u-button>
+          <button class="button-purple-back-white-text" @click="fastLogin">YXG社区一键登录</button>
         </u-form-item>
       </u-form>
     </view>
@@ -73,19 +73,19 @@ export default {
     loginFunction() {
       console.log(this.login);
       uni.redirectTo({
-        url: "/pages/index/userMain?signName=" + this.login.sign
+        url: "/pages/home?signName=" + this.login.sign
       })
     },
     fastLogin() {
       console.log("快速登录");
       uni.redirectTo({
-        url: "/pages/index/userMain?signName=" + this.login.sign
+        url: "/pages/home?signName=" + this.login.sign
       })
     },
     loginToRegister() {
       console.log("跳转注册");
       uni.navigateTo({
-        url: "/pages/index/register"
+        url: "/pages/register"
       })
     }
   }

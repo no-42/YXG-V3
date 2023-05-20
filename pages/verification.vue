@@ -3,7 +3,7 @@
     <u-toast ref="uToast"></u-toast>
     <u-code :seconds="seconds" @end="end" @start="start" ref="uCode" @change="codeChange"></u-code>
     <u-code-input :maxlength="4" v-model="code" mode="line" @finish="finish"></u-code-input>
-    <u-button class="button-purple" :disabled="buttonDisabled" @tap="getCode">{{tips}}</u-button>
+    <button class="button-purple-back-white-text" :disabled="buttonDisabled" @tap="getCode">{{tips}}</button>
   </view>
 </template>
 
@@ -63,7 +63,7 @@ export default {
       console.log(this.register);
       console.log(this.code);
       uni.redirectTo({
-        url:"/pages/index/userMain?signName=" + this.register.sign
+        url:"/pages/home?signName=" + this.register.sign
       })
     }
   }
