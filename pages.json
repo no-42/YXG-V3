@@ -3,18 +3,63 @@
 		"^u-(.*)": "@/uni_modules/uview-plus/components/u-$1/u-$1.vue"
 	},
 	"pages": [{
-		"path": "pages/index/index",
+		"path": "pages/index",
 		"style": {
-			"navigationBarTitleText": "uni-app"
+			// 隐藏顶部菜单状态栏
+			"navigationStyle": "custom",
+			"app-plus": {
+				// 禁用原生导航
+				"titleNView": false
+			}
 		}
-	}],
+	},
+		{
+			"path": "pages/loginWithName",
+			"style": {
+				// 隐藏顶部菜单状态栏
+				"navigationStyle": "custom",
+				"app-plus": {
+					// 禁用原生导航
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/register",
+			"style": {
+				// 隐藏顶部菜单状态栏
+				"navigationStyle": "custom",
+				"app-plus": {
+					// 禁用原生导航
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/verification",
+			"style": {
+				"navigationBarTitleText": "短信验证码"
+			}
+		},
+		{
+			"path": "pages/home",
+			"style": {
+				// 隐藏顶部菜单状态栏
+				"navigationStyle": "custom",
+				"app-plus": {
+					// 禁用原生导航
+					"titleNView": false
+				}
+			}
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
+		"navigationBarTitleText": "YGX",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#ffffff",
 		"app-plus": {
-			"background": "#efeff4"
+			"background": "#ffffff"
 		}
 	}
 }

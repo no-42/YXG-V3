@@ -1,0 +1,44 @@
+.button-purple {
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(109, 95, 254)
+}
+
+.button-white {
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo-view {
+    height: 50rpx;
+    width: 50rpx;
+    margin-top: 50rpx;
+}
+
+.logo-image {
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+.show-body {
+    width: 80vw;
+    height: 90vh;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.half-text-view {
+    margin-top: 50rpx;
+    margin-bottom: 50rpx;
+}
