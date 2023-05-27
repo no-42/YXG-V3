@@ -3,7 +3,7 @@
     <view>
       <view class="logo-view">
         <image src="../static/img/yxg-logo.png" mode="aspectFit"
-               class="logo-image">
+               class="logo-image"></image>
       </view>
       <view style="margin-top: 50rpx;">
         <u-text class="half-text-view" size="25" :bold="true" text="创建一个新的"></u-text>
@@ -38,7 +38,7 @@
             <u-text text="用户协议与隐私政策" color="rgb(74,70,224)" :bold="true" @click="showMessage"></u-text>
           </u-checkbox-group>
         </u-form-item>
-        <u-form-item>
+        <u-form-item class="show-button">
           <button class="button-purple-back-white-text" @click="registerFunction">创建账户</button>
         </u-form-item>
       </u-form>

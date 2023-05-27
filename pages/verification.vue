@@ -63,7 +63,8 @@ export default {
       console.log(this.register);
       console.log(this.code);
       uni.redirectTo({
-        url:"/pages/home?signName=" + this.register.sign
+        url:"/pages/home?signName=" + this.register.sign +
+			"&register=true"
       })
     }
   }

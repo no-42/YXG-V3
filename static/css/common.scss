@@ -5,6 +5,7 @@
   background-color: rgb(109, 95, 254);
   font-size: 28rpx;
   width: 100%;
+  margin-bottom: 20rpx;
 }
 
 .show-button .button-white-back-purple-text {
@@ -14,6 +15,7 @@
   border-radius: 20rpx;
   font-size: 28rpx;
   width: 100%;
+  margin-bottom: 20rpx;
 }
 
 .show-button .button-white {
@@ -50,6 +52,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.show-body-only {
+  width: 80vw;
+  height: 90vh;
+  margin-left: 10vw;
 }
 
 .half-text-view {
