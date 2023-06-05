@@ -1,11 +1,8 @@
 import uviewPlus from './uni_modules/uview-plus'
-// import './static/css/common.scss'
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
 import './static/css/common.scss'
-// Vue.use(uviewPlus)
-// Vue.config.unit = 'rpx'
 Vue.config.productionTip = false
 App.mpType = 'app'
 
@@ -18,12 +15,14 @@ app.$mount()
 // #ifdef VUE3
 import {createSSRApp} from 'vue'
 import App from './App.vue'
+import TopText from './pages/component/top-text/top-text'
 
 export function createApp() {
-    const app = createSSRApp(App)
-    return {
-        app
-    }
+	const app = createSSRApp(App)
+	app.component('TopText', TopText)
+	return {
+		app
+	}
 }
 
 // #endif

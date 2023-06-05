@@ -1,14 +1,7 @@
 <template>
 	<view>
 		<view v-if="pageValue == 0">
-			<!-- <view class="logo-view">
-        <image src="../static/img/yxg-logo-2.png" mode="aspectFit"
-               class="logo-image"></image>
-      </view> -->
-			<view style="margin: 50rpx;">
-				<u-text class="logo-text" size="25" :bold="true" text="上午好,领航员"></u-text>
-			</view>
-			<u-line length="10%" color="rgb(255,126,118)" margin="50rpx" :hairline="true"></u-line>
+			<TopText title="上午好,领航员"></TopText>
 			<view>
 				<u-popup :show="isRegister" mode="bottom" @close="closePopup" @open="openPopup">
 					<view class="show-button"
@@ -26,24 +19,20 @@
 		</view>
 
 		<view v-if="pageValue == 1">
-			<view style="margin: 50rpx;">
-				<u-text class="logo-text" size="25" :bold="true" text="消息通知"></u-text>
-			</view>
-			<u-line length="10%" color="rgb(255,126,118)" :hairline="true"></u-line>
+			<TopText title="消息通知"></TopText>
 		</view>
-
-		<view v-if="pageValue == 2" style="background-image: url('../../static/img/welcome.jpg')">
-			<view style="margin: 50rpx;">
-				<u-row>
-					<u-col span="10">
-						<u-text class="logo-text" color="#ffffff" size="25" :bold="true" text="个人中心"></u-text>
-					</u-col>
-					<u-col span="2" style="height: 50rpx; width: 50rpx;">
-						<u-icon name="scan" size="30"></u-icon>
-					</u-col>
-				</u-row>
+		<view v-if="pageValue == 2">
+			<Shop></Shop>
+		</view>
+		<view v-if="pageValue == 3" style="background-image: url('../../static/img/welcome.jpg')">
+			<view style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;">
+				<view>
+					<TopText title="个人中心" color="#ffffff"></TopText>
+				</view>
+				<view>
+					<u-icon name="scan" size="30" style="margin-right: 50rpx;"></u-icon>
+				</view>
 			</view>
-			<u-line length="10%" color="rgb(255,126,118)" margin="30rpx" :hairline="true"></u-line>
 			<view style="margin: 50rpx;">
 				<u-row style="height: 100%;border-radius: 20px;">
 					<u-col span="6">
@@ -59,7 +48,7 @@
 				<view style="padding: 20rpx;">
 					<u-row>
 						<u-col span="6">
-							<u-text prefixIcon="职业:" bold="true" size="15" :text="userInfo.career"></u-text>
+							<u-text prefixIcon="职业:" :bold="true" size="15" :text="userInfo.career"></u-text>
 						</u-col>
 						<u-col span="6">
 							<u-text prefixIcon="地下城\n抽签资格" :text="userInfo.drawsNum" suffixIcon="次"></u-text>
@@ -112,6 +101,8 @@
 			</u-tabbar-item>
 			<u-tabbar-item icon="bell">
 			</u-tabbar-item>
+			<u-tabbar-item icon="bag">
+			</u-tabbar-item>
 			<u-tabbar-item icon="account">
 			</u-tabbar-item>
 		</u-tabbar>
@@ -119,7 +110,11 @@
 </template>
 
 <script>
+	import Shop from './component/shop/shop'
 	export default {
+		components:{
+			Shop
+		},
 		data() {
 			return {
 				pageValue: 0,
