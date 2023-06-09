@@ -1,9 +1,9 @@
 <template>
-	<view class="view-type-item">
+	<view :id="itemId" :style="getHeight" :class="itemType == 'info' ? 'view-type-item' : 'view-type-item-all-vw'">
 		<view class="view-item-top-style">
-			<u-image :src="itemInfo.img"  width="100%" height="100%"></u-image>
+			<u-image :src="itemInfo.img" width="100%" height="100%"></u-image>
 		</view>
-		<view class="view-item-buttom-style">
+		<view class="inner view-item-buttom-style">
 			<view style="padding: 20rpx;height: 100%;">
 				<u-row style="margin-top: -50rpx;" justify="end">
 					<view class="scroll-item-icon-style">
@@ -18,9 +18,15 @@
 						<u-row>
 							<u-text color="rgba(141, 152, 175, 1)" size="13" :text="itemInfo.mallName"></u-text>
 						</u-row>
+					</view>
+					<view>
 						<u-row>
-							<u-col span="8" style="margin-bottom: 10rpx;"><u-text color="rgba(0, 0, 0, 1)" :bold="true" :text="itemInfo.name"></u-text></u-col>
-							<u-col span="4"><u-text prefixIcon="./img/priceChanges.png" size="18px" color="rgba(10, 178, 125, 1)" bold="true" :text="itemInfo.finalPrice"></u-text></u-col>
+							<u-col span="9" style="margin-bottom: 10rpx;"><u-text color="rgba(0, 0, 0, 1)" :bold="true"
+									:text="itemInfo.name"></u-text></u-col>
+							<u-col span="3">
+								<u-text prefixIcon="./component/my-scroll-item/img/priceChanges.png" size="18px"
+									color="rgba(10, 178, 125, 1)" bold="true"
+									:text="itemInfo.finalPrice"></u-text></u-col>
 						</u-row>
 					</view>
 					<view>
@@ -47,6 +53,23 @@
 			itemInfo: {
 				type: Object,
 				required: true
+			},
+			itemType: {
+				type: String,
+				default: 'info'
+			},
+			itemId: {
+				type: String,
+				required: true
+			}
+		},
+
+		mounted() {
+			if (this.$props.itemType != 'info') {
+				let myDom = document.getElementById(this.$props.itemId);
+				let width = myDom.scrollWidth;
+				console.log(width);
+				myDom.style.height = (width * 1.1) + "px"
 			}
 		}
 	}
@@ -61,7 +84,7 @@
 		color: rgba(255, 255, 255, 1);
 		text-align: center;
 	}
-	
+
 	.scroll-item-icon-style {
 		border-radius: 50rpx;
 		background-color: white;
@@ -75,8 +98,12 @@
 	}
 
 	.view-type-item-all-vw {
-		width: 100vw;
-		height: calc(100vw*1.1);
+		width: 100%;
+		/* height: calc(width*1.1); */
+	}
+
+	.view-type-item-all-vw .inner {
+		height: 50%;
 	}
 
 	.view-item-top-style {

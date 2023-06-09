@@ -62,6 +62,17 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/realTimeBidding",
+			"style": {
+				// 隐藏顶部菜单状态栏
+				"navigationStyle": "custom",
+				"app-plus": {
+					// 禁用原生导航
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"globalStyle": {

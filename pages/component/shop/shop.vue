@@ -27,7 +27,7 @@
 						@click="realTimeBiddingClick"></u-text></u-col>
 			</u-row>
 			<u-scroll-list style="width: 100vw;" :indicator="false">
-				<MyScrollItem v-for="good in goodsInfoList" :itemInfo="good"></MyScrollItem>
+				<MyScrollItem v-for="(good,index) in goodsInfoList" :itemInfo="good" :itemId="'shopReal' + index"></MyScrollItem>
 			</u-scroll-list>
 		</view>
 	</view>
@@ -128,7 +128,7 @@
 					// 	name: "goodsName",
 					// 	endTime: "3小时12分钟36秒后",
 					// 	finalPrice: "669",
-					// },
+					// }
 					// {
 					// 	id: "id3",
 					// 	mallName: "mall",
@@ -159,6 +159,9 @@
 			},
 			realTimeBiddingClick() {
 				console.log("查询更多实时竞价");
+				uni.navigateTo({
+					url:"/pages/realTimeBidding"
+				})
 			}
 		}
 	}
