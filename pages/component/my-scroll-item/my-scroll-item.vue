@@ -93,7 +93,8 @@
 	}
 
 	.view-type-item {
-		width: 500rpx;
+		min-width: 500rpx;
+		margin-right: 50rpx;
 		height: calc(500rpx*1.1);
 	}
 

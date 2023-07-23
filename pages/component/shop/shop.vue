@@ -121,28 +121,28 @@
 						endTime: "3小时12分钟36秒后",
 						finalPrice: "669",
 					}
-					// ,
-					// {
-					// 	id: "id2",
-					// 	mallName: "mall",
-					// 	name: "goodsName",
-					// 	endTime: "3小时12分钟36秒后",
-					// 	finalPrice: "669",
-					// }
-					// {
-					// 	id: "id3",
-					// 	mallName: "mall",
-					// 	name: "goodsName",
-					// 	endTime: "3小时12分钟36秒后",
-					// 	finalPrice: "669",
-					// },
-					// {
-					// 	id: "id4",
-					// 	mallName: "mall",
-					// 	name: "goodsName",
-					// 	endTime: "3小时12分钟36秒后",
-					// 	finalPrice: "669",
-					// }
+					,
+					{
+						id: "id2",
+						mallName: "mall",
+						name: "goodsName",
+						endTime: "3小时12分钟36秒后",
+						finalPrice: "669",
+					},
+					{
+						id: "id3",
+						mallName: "mall",
+						name: "goodsName",
+						endTime: "3小时12分钟36秒后",
+						finalPrice: "669",
+					},
+					{
+						id: "id4",
+						mallName: "mall",
+						name: "goodsName",
+						endTime: "3小时12分钟36秒后",
+						finalPrice: "669",
+					}
 				]
 
 			}
