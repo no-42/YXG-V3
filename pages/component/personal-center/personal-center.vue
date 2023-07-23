@@ -18,7 +18,7 @@
 			</u-col>
 		</u-row>
 	</view>
-	<view style="background-color: white;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+	<view style="background-color: white;border-top-left-radius: 20px;border-top-right-radius: 20px; height: 1005rpx;">
 		<view style="padding: 20rpx;">
 			<u-row>
 				<u-col span="6">
@@ -90,9 +90,10 @@
 <style>
 .option-cell {
 	margin: 18rpx 60rpx;
+	margin-left: 50rpx;
 	padding: 14rpx 0;
-	border-radius: 20px;
-	border: 2rpx solid #d0d0d0;
-	box-shadow: 0 0 40rpx rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	border: 1px solid rgba(214, 214, 214, 1);
+	box-shadow: -1px 7px 18px rgba(0, 0, 0, 0.25);
 }
 </style>
