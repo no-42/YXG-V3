@@ -18,7 +18,7 @@
 			</u-col>
 		</u-row>
 	</view>
-	<view style="background-color: white;border-radius: 20px;">
+	<view style="background-color: white;border-top-left-radius: 20px;border-top-right-radius: 20px;">
 		<view style="padding: 20rpx;">
 			<u-row>
 				<u-col span="6">
@@ -57,13 +57,13 @@
 		</view>
 
 		<u-cell-group>
-			<u-cell title="服务" :isLink="true" icon="../static/img/yxg-logo-2.png">
+			<u-cell style="margin-top: 50rpx;" class="option-cell" title="服务" :border="false" :isLink="true" icon="../static/img/yxg-logo-2.png">
 			</u-cell>
-			<u-cell title="卡包" :isLink="true" icon="../static/img/pack.png" @click="jumpToCard">
+			<u-cell class="option-cell" title="卡包" :border="false" :isLink="true" icon="../static/img/pack.png" @click="jumpToCard">
 			</u-cell>
-			<u-cell title="任务中心" :isLink="true" icon="../static/img/setting.png">
+			<u-cell class="option-cell" title="任务中心" :border="false" :isLink="true" icon="../static/img/setting.png">
 			</u-cell>
-			<u-cell title="设置" :isLink="true" icon="../static/img/setting.png">
+			<u-cell class="option-cell" title="设置" :border="false" :isLink="true" icon="../static/img/setting.png">
 			</u-cell>
 		</u-cell-group>
 	</view>
@@ -88,4 +88,11 @@
 </script>
 
 <style>
+.option-cell {
+	margin: 18rpx 60rpx;
+	padding: 14rpx 0;
+	border-radius: 20px;
+	border: 2rpx solid #d0d0d0;
+	box-shadow: 0 0 40rpx rgba(0, 0, 0, 0.2);
+}
 </style>
